@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Number Guessing Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Square+Peg&display=swap" rel="stylesheet">
+  
+    <style>
+        html {
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Square Peg', cursive;
+
+        }
+        .gif img
+        {
+            height: 80px;
+            width: 80px;
+        }
+    
+      
+        body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+    background-image: url(https://images2.alphacoders.com/504/504108.jpg);
+
+    }
+    </style>
+</head>
+  
+<body>
+<h1 style="color: red;font-size: 100px;">Guess The Number</h1>
+  
+<h1>We have selected a random number between 1 - 10. 
+<br>Try if you can guess it.</h1>
+  
+<div class="form">
+    <label for="guessField"><h2>Enter a guess: </h2></label>
+    <input type = "text" id = "guessField" class = "guessField">
+    <input type = "submit" value = "Submit guess" 
+           class = "guessSubmit" id = "submitguess">
+</div>
+<div class="gif">
+    <img  src="./R.gif" alt="">
+</div>
+  
+<script type = "text/javascript">
+  
+    // random value generated
+    var y = Math.floor(Math.random() * 10 + 1);
+      
+    // counting the number of guesses
+    // made for correct Guess
+    var guess = 1;
+      
+    document.getElementById("submitguess").onclick = function(){
+        var k=3;
+        while(k>0)  
+        {  
+   // number guessed by user     
+   var x = document.getElementById("guessField").value;
+   
+
+  
+   if(x == y)
+   {    
+       alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+               + guess + " GUESS ");
+   }
+   else if(x > y && k>0) /* if guessed number is greater
+                   than actual number*/ 
+   {    
+       guess++;
+       alert("OOPS SORRY!! TRY A SMALLER NUMBER " + k +  " chances left");
+   }
+   else
+   {
+       guess++;
+       alert("OOPS SORRY!! TRY A GREATER NUMBER " + k +  " chances left");
+   }
+    k--;
+}
+}
+</script>
+</body>
+</html>      
