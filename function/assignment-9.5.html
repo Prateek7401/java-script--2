@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-9.5</title>
+    <script>
+        var str1=prompt("Enter a string" )
+        function threechar(str)
+        {
+            if(str.length >=3)
+        {
+            str_len=3;
+            front=str.substring(0,3);
+            back=str.substring(str.length-3);
+            document.write(front+back);
+            
+        }   
+        else document.write(str);
+         }
+         (threechar(str1));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
